@@ -1,0 +1,408 @@
+Option Explicit
+
+
+Public Sub Modulo_1()
+    
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("E7")) Then
+
+        Worksheets("Modulo 1").Range("E7").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("E7").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+        
+         
+       
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H9")) Then
+
+        Worksheets("Modulo 1").Range("H9").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H9").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H12")) Then
+
+        Worksheets("Modulo 1").Range("H12").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H12").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H15")) Then
+
+        Worksheets("Modulo 1").Range("H15").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H15").Interior.Color = vbYellow
+         MsgBox "Campo Obligatorio", vbCritical
+       
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H15")) Then
+
+        Worksheets("Modulo 1").Range("H15").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H15").Interior.Color = vbYellow
+         MsgBox "Campo Obligatorio", vbCritical
+       
+    End If
+    
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("E31")) Then
+
+        Worksheets("Modulo 1").Range("E31").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("E31").Interior.Color = vbYellow
+         MsgBox "Campo Obligatorio", vbCritical
+       
+    End If
+    
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H17")) Then
+
+        Worksheets("Modulo 1").Range("H17").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H17").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+    End If
+    
+    
+    ' VALIDA SI EL CAMPO ES UNA FECHA
+      If IsDate(Worksheets("Modulo 1").Range("E27")) Then
+        'MsgBox "Es una Fecha"
+        
+        Else
+        
+        MsgBox "Revise el formato no es una fecha", vbCritical
+        Worksheets("Modulo 1").Range("E27").Interior.Color = vbYellow
+        
+    End If
+    
+    If IsDate(Worksheets("Modulo 1").Range("E31")) Then
+        MsgBox "Este campo tiene formato fecha, por favor cambiar", vbCritical
+        Worksheets("Modulo 1").Range("E31").Interior.Color = vbYellow
+        
+        
+              
+    End If
+    
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H37")) Then
+
+        Worksheets("Modulo 1").Range("H37").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H37").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H42")) Then
+
+        Worksheets("Modulo 1").Range("H42").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H42").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H56")) Then
+
+        Worksheets("Modulo 1").Range("H56").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H56").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+           
+    End If
+    
+    If IsEmpty(Worksheets("Modulo 1").Range("H58")) Then
+
+        Range("H58").Value = "Campo Obligatorio"
+        Range("H58").Interior.Color = vbYellow
+        MsgBox "Campo Obligatorio", vbCritical
+    End If
+    
+    If (Worksheets("Modulo 1").Range("H58") = "I+D") Then
+
+        Worksheets("Modulo 1").Range("H60").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H60").Interior.Color = RGB(255, 150, 200)
+         MsgBox "Campo Obligatorio", vbCritical
+        Worksheets("Modulo 1").Range("H62").Value = "Campo Obligatorio"
+        Worksheets("Modulo 1").Range("H62").Interior.Color = RGB(255, 150, 200)
+         MsgBox "Campo Obligatorio", vbCritical
+       
+       
+    End If
+    
+  
+    
+End Sub
+
+
+Public Sub Modulo_2()
+
+If IsEmpty(Worksheets("Modulo 2").Range("B7")) Then
+
+  ElseIf IsEmpty(Worksheets("Modulo 2").Range("C7")) Then
+  Worksheets("Modulo 2").Range("C7").Interior.Color = RGB(255, 255, 200)
+  MsgBox "Campo Obligatorio", vbCritical
+  
+  
+  ElseIf IsEmpty(Worksheets("Modulo 2").Range("D7")) Then
+  Worksheets("Modulo 2").Range("D7").Interior.Color = RGB(255, 255, 200)
+  MsgBox "Campo Obligatorio", vbCritical
+  
+  
+  ElseIf IsEmpty(Worksheets("Modulo 2").Range("E7")) Then
+  Worksheets("Modulo 2").Range("E7").Interior.Color = RGB(255, 255, 200)
+  MsgBox "Campo Obligatorio", vbCritical
+       
+    End If
+   
+End Sub
+
+Sub Pasar_Informacion_Caracterizacion()
+'
+' CopiarII Macro
+'
+
+'
+    Sheets("Modulo 1").Select
+    Sheets.Add
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[6]C[4]"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[8]C[6]"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[11]C[5]"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[14]C[4]"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[16]C[3]"
+    Range("F1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[20]C"
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[26]C[-2]"
+    Range("H1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[30]C[-3]"
+    Range("I1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[36]C[-1]"
+    Range("J1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[38]C[-2]"
+    Range("K1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[41]C[-3]"
+    Range("L1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[47]C[-6]"
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[55]C[-5]"
+    Range("N1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[57]C[-6]"
+    Range("O1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[59]C[-7]"
+    Range("P1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[61]C[-8]"
+    Range("Q1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[66]C[-9]"
+    Range("R1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[68]C[-10]"
+    Range("S1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[70]C[-11]"
+    Range("T1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[72]C[-12]"
+    Range("J1").Select
+    Selection.End(xlToRight).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Rows("1:1").Select
+    Selection.Copy
+    Workbooks.Open Filename:= _
+        "C:\Users\LFIQUITIVA\Documents\Subir_Datos\Tbl_Caracterizacion.xlsx"
+    Range("E2").Select
+    Selection.End(xlToLeft).Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Selection.PasteSpecial Paste:=xlPasteFormats, Operation:=xlNone, _
+        SkipBlanks:=False, Transpose:=False
+    Application.CutCopyMode = False
+    ActiveWorkbook.Save
+    ActiveWindow.Close
+    Sheets("Hoja1").Select
+    ActiveWindow.SelectedSheets.Delete
+    Sheets("Modulo 2").Select
+    
+End Sub
+
+
+Sub Subir_datos_Cuantificacion()
+'
+' prueba Macro
+'
+
+'
+    Worksheets("Modulo 2").Range("B7:R46").Select
+    Selection.Copy
+    Sheets("Modulo 2").Select
+    Sheets.Add
+    Sheets("Hoja2").Select
+    Sheets("Hoja2").Name = "Cuantificacion"
+    Range("B1").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Columns("L:L").Select
+    Application.CutCopyMode = False
+    Selection.Delete Shift:=xlToLeft
+    Columns("Q:Q").Select
+    Selection.Delete Shift:=xlToLeft
+    Range("L1:P2").Select
+    Range("P1").Activate
+    Selection.ClearContents
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Selection.End(xlToLeft).Select
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "=+'Modulo 1'!R[6]C[4]"
+    Range("A1:A31").Select
+    Selection.End(xlUp).Select
+    Selection.Copy
+    Range("A2:A40").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Selection.End(xlUp).Select
+    Range("A1").Select
+    Selection.Copy
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("A2").Select
+    Application.CutCopyMode = False
+    Range("A1").Select
+    Selection.Copy
+    Range("A2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Range("A2:A40").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Selection.End(xlDown).Select
+    Range("A39").Select
+    Selection.End(xlUp).Select
+    Selection.End(xlUp).Select
+    Range("B2").Select
+    ActiveCell.FormulaR1C1 = "=+R[-1]C"
+    Range("B2").Select
+    Selection.Copy
+    Range("C2").Select
+    ActiveSheet.Paste
+    ActiveSheet.Paste
+    Range("D2").Select
+    ActiveSheet.Paste
+    Range("E2").Select
+    ActiveSheet.Paste
+    Range("B2:E2").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("B4").Select
+    ActiveSheet.Paste
+    Range("B6").Select
+    ActiveSheet.Paste
+    Range("B8").Select
+    ActiveSheet.Paste
+    Range("B10").Select
+    ActiveSheet.Paste
+    Range("B12").Select
+    ActiveSheet.Paste
+    Range("B14").Select
+    ActiveSheet.Paste
+    Range("B16").Select
+    ActiveSheet.Paste
+    Range("B18").Select
+    ActiveSheet.Paste
+    Range("B20").Select
+    ActiveSheet.Paste
+    Range("B22").Select
+    ActiveSheet.Paste
+    Range("B24").Select
+    ActiveSheet.Paste
+    Range("B26").Select
+    ActiveSheet.Paste
+    Range("B28").Select
+    ActiveSheet.Paste
+    Range("B30").Select
+    ActiveSheet.Paste
+    Range("B32").Select
+    ActiveSheet.Paste
+    Range("B34").Select
+    ActiveSheet.Paste
+    Range("B36").Select
+    ActiveSheet.Paste
+    Range("B38").Select
+    ActiveSheet.Paste
+    Range("B40").Select
+    ActiveSheet.Paste
+    Range("B38").Select
+    Selection.End(xlUp).Select
+    Selection.End(xlUp).Select
+    Selection.End(xlUp).Select
+    Selection.End(xlUp).Select
+    Application.CutCopyMode = False
+    Range("A1").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Range("A1:P1").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    Workbooks.Open Filename:= _
+        "C:\Users\LFIQUITIVA\Documents\Subir_Datos\Cuantificacion2.xlsx"
+    Range("B2").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("D1").Select
+    Application.CutCopyMode = False
+    Selection.AutoFilter
+    ActiveSheet.Range("$A$1:$Q$41").AutoFilter Field:=4, Criteria1:="=0", _
+        Operator:=xlOr, Criteria2:="="
+    Rows("24:41").Select
+    Selection.Delete Shift:=xlUp
+    Selection.AutoFilter
+    Range("B2").Select
+    ActiveWorkbook.Save
+    ActiveWindow.Close
+    Sheets("Cuantificacion").Select
+    ActiveWindow.SelectedSheets.Delete
+    Range("E23:E24").Select
+    Sheets("Contacto").Select
+End Sub
+Sub Contacto()
+'
+' Contacto Macro
+'
+
+'
+    Application.Worksheets("Contacto").Range("C9:H28").Select
+    Selection.Copy
+    Sheets("Contacto").Select
+    Workbooks.Open Filename:= _
+        "C:\Users\LFIQUITIVA\Documents\Subir_Datos\Contacto.xlsx"
+    Range("A2").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("B1").Select
+    Application.CutCopyMode = False
+    Selection.AutoFilter
+    ActiveSheet.Range("$A$1:$F$21").AutoFilter Field:=2, Criteria1:="="
+    Rows("10:35").Select
+    Selection.Delete Shift:=xlUp
+    Selection.AutoFilter
+    Range("B4").Select
+    ActiveWorkbook.Save
+    ActiveWindow.Close
+    Range("D12").Select
+End Sub
+
+
+
+
+
+Public Sub OCyT()
+
+Call Modulo_1
+Call Modulo_2
+Call Pasar_Informacion_Caracterizacion
+Call Subir_datos_Cuantificacion
+Call Contacto
+
+
+End Sub
